@@ -1,0 +1,176 @@
+body{
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 23px;
+}
+
+.wrapper {
+    overflow-x:hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: repeating-linear-gradient(
+                    45deg,
+                    rgba(255,255,255,0.4),
+                     rgba(255,255,255,0.1),
+                    rgba(255,255,255,0.1),
+                    
+                    rgba(255,255,255,0.1),
+                    rgba(255,255,255,0.4)),
+                    linear-gradient(
+                        rgb(199, 119, 0), 
+                        rgb(35, 35, 252)
+    );
+    color: rgb(228, 228, 228);
+    
+}
+
+/* top nav */
+nav {
+    display: flex;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.4em;
+    height: 2.4em;
+    border: 1px solid white;
+    border-radius: 100%;
+    margin: 0em 0.3em;
+    transition: all 0.5s ease-in-out;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-item:hover {
+    background-color: rgba(177, 177, 177, 0.4);
+    transform: scale(1.15);        
+}
+
+.nav-item:hover a {
+    transform: scale(1.2);
+}
+
+
+/* middle text */
+.info{
+    text-transform: uppercase;
+    font-weight: 100;
+    width: 20em;
+    text-align: center;
+    line-height: 1.8em;
+    margin-top: 0.8em;
+    letter-spacing: 0.03em;    
+}
+
+.info span:nth-child(4) {
+    font-weight: 900;
+}
+
+/* countdown clock */
+.countdown{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: center;          
+}
+
+.countdown-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0.3em 28px 4em 28px;
+    
+}
+
+.clock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2em;
+    height: 2em;
+    border: 1px solid white;
+    border-radius: 100%;
+    color: white;
+    font-size: 2em;
+    transition: all 0.5s ease-in-out;    
+}
+
+.countdown-item span {
+    margin-top: 0.3em;
+    font-size: 0.7em;
+}
+
+/* button */
+.btn input{
+    background-color: white;
+    border: none;
+    border-radius: 2em;
+    padding: 0.7em 1.3em;
+    color: rgb(207, 58, 133);
+    font-weight: 900;  
+    font-size: 0.6em;    
+    text-transform: uppercase;
+    transition: all 0.2s linear;
+    font-family: 'Lato', sans-serif;
+    
+}
+
+.btn:hover input {
+    background-color:rgb(207, 58, 133);
+    color:white;
+    transform: scale(1.05);
+}
+
+:focus{
+    outline: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .countdown-item {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .nav-item {        
+        width: 2.0em;
+        height: 2.0em;
+    }
+
+    .info{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .clock {
+        margin-right: auto;
+        margin-left: auto;
+        width: 1.8em;
+        height: 1.8em;
+        font-size: 1.8em;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    .clock {
+        
+        width: 1.6em;
+        height: 1.6em;
+        font-size: 1.6em;
+    }
+}
+
